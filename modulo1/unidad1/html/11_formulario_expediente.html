@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+    <p>Ejemplo Formulario SImple</p>
+    <form action="procesar.php" method="post">
+        <table border="0">
+            <tr bgcolor="EG7760">
+                <th>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                </th>
+                <th>
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo">
+                </th>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha" name="fecha">
+                </td>
+                <td>
+                    <label for="color">Color Favorito</label>
+                    <input type="color" id="color" name="color">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="color">Genero</label>
+                    <input type="radio" id="m" name="genero" value="M"><label for="m">Masculino</label>
+                    <input type="radio" id="m" name="genero" value="F"><label for="f">Femenino</label>
+                </td>
+                <td>
+                    <label for="color">Pais</label>
+                    <select id="pais" name="pais">
+                        <option value="ec">Seleccione ...</option>
+                        <option value="ec">Ecuador</option>
+                        <option value="mx">Mexico</option>
+                        <option value="ve">Venezuela</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="comentario">Comentarios:</label>
+                    <textarea type="textarea" id="comentario" name="comentario" rows="5"></textarea>
+                </td>
+                <td>
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="paisacepto">Acepto los terminos y condiciones</label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+
+</body>
+
+
+
+</html>
