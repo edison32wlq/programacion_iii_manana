@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+    <p>Formulario de Registro de Nuevo Producto</p>
+    <form action="agregar_producto.php" method="post">
+        <table border="0">
+            <tr bgcolor="EG7760">
+                <th>
+                    <label for="nombre_producto">Nombre del Producto</label>
+                    <input type="text" id="nombre_producto" name="nombre_producto">
+                </th>
+                <th>
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" name="codigo">
+                </th>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="fecha_ingreso">Fecha de Ingreso</label>
+                    <input type="date" id="fecha_ingreso" name="fecha_ingreso">
+                </td>
+                <td>
+                    <label for="precio">Precio Unitario</label>
+                    <input type="number" id="precio" name="precio" step="0.01">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="tipo">Tipo de Unidad</label>
+                    <input type="radio" id="unidad" name="tipo_unidad" value="unidad"><label for="unidad">Unidad</label>
+                    <input type="radio" id="paquete" name="tipo_unidad" value="paquete"><label for="paquete">Paquete</label>
+                </td>
+                <td>
+                    <label for="proveedor">Proveedor</label>
+                    <select id="proveedor" name="proveedor">
+                        <option value="sel">Seleccione ...</option>
+                        <option value="a_tech">A-Tech S.A.</option>
+                        <option value="global_dist">Global Distribuidores</option>
+                        <option value="sum_plus">Suministros Plus</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="descripcion">Descripción del Producto:</label>
+                    <textarea id="descripcion" name="descripcion" rows="5"></textarea>
+                </td>
+                <td>
+                    <input type="checkbox" id="activo" name="activo" checked>
+                    <label for="activo">Producto Activo en Inventario</label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Guardar Producto">
+        <input type="reset" value="Borrar Formulario">
+    </form>
+
+</body>
+
+</html>
