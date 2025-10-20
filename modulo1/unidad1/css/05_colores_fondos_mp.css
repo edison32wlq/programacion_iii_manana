@@ -1,0 +1,15 @@
+.fondo {
+    color: blueviolet;
+    background-image: url("inventario.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: aqua;
+    padding: 40px;
+    opacity: 1;
+    text-align: center;
+    font-size: 44px;
+}
+
+.titulo {
+    color: blue
+}

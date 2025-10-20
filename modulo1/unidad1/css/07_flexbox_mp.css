@@ -1,0 +1,30 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    padding: 10px;
+    gap: 10px;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: rgb(237, 155, 125);
+    padding: 20px;
+    border: 3px solid rgb(108, 5, 5);
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.item_especial {
+    align-self: flex-start;
+    background-color: rgb(46, 46, 206);
+    padding: 20px;
+    border: 2px solid rgb(94, 10, 10);
+    flex: 1 1 100px;
+    text-align: center;
+    color:white;
+
+}
