@@ -1,4 +1,15 @@
-import { Persona } from "./07_persona"
+export class Persona {
+    nombre: string;
+    edad: number;
+    constructor(
+        nombre:string,
+        edad:number
+    ){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
 
-const ana: Persona = new Persona('Ana', 27);
-ana.saludar();
+    saludar(): void{
+        console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
+    }
+}

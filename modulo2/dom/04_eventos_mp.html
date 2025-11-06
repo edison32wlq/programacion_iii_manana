@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos en Inventario</title>
+    <script src="04_eventos_mp.js" defer></script>
+</head>
+
+<body>
+    <h1>Gestión de Inventario</h1>
+    <div id="contenedor"></div>
+
+    <button id="crear">Agregar Producto</button>
+    <button id="eliminar">Eliminar Producto</button>
+
+    <button onclick="alert('Bienvenido al sistema de inventario')"> 
+        Saludo con JavaScript inline
+    </button>
+
+    <button onclick="mostrarMensaje()"> 
+        Saludo desde función
+    </button>
+
+    <p id="parrafo">Haz doble clic para ver detalles del producto</p>
+
+    <form id="formulario" style="margin-top: 20px;">
+        <input type="text" id="nombre" placeholder="Escribe el nombre del producto"/>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
