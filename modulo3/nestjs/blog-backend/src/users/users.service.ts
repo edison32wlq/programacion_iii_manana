@@ -29,7 +29,7 @@ export class UsersService {
   findOne(id: string) {
     return this.userRepository.findOne({ where: { id } });
   }
-  async findByEmail(username: string) {
+  async findByUsername(username: string) {
     return this.userRepository.findOne({ where: { username } });
   }
 
