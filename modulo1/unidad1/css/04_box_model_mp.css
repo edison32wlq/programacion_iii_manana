@@ -1,0 +1,8 @@
+.caja_box_model{
+    width: 400px;
+    height: 400px;
+    border: 10px solid  #690202;
+    padding: 20px;
+    background-color: rgb(234, 0, 0);
+    box-sizing: border-box;
+}
