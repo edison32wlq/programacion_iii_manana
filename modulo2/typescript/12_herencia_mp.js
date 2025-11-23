@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var _11_herencia_mp_1 = require("./11_herencia_mp");
+var miDispositivo = new _11_herencia_mp_1.DispositivoTech('Logitech', 'Mouse');
+console.log(miDispositivo.marca);
+console.log(miDispositivo.categoria);
+miDispositivo.encender();
+var miLaptop = new _11_herencia_mp_1.Laptop('ASUS', 'Laptop Gamer');
+console.log(miLaptop.marca);
+console.log(miLaptop.categoria);
+miLaptop.encender();
