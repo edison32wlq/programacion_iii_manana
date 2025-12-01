@@ -34,8 +34,6 @@ export class BasicsController {
         calculoTriangulo(@Body() bodyPost: object) {
             return this.basicsService.calculoTriangulo(bodyPost);        
         }
-
-
         
         @Get('calculo-area-rectangulo/:ancho/:alto')
         areaRectangulo(
@@ -43,6 +41,14 @@ export class BasicsController {
             @Param('alto') alto: number,
         ) {
             return this.basicsService.areaRectangulo(ancho, alto);
+        }
+
+        @Get('calcular-stock/:stock/:cantidad')
+        calcularStock(
+            @Param('stock') stock: number,
+            @Param('cantidad') cantidad: number
+        ) {
+            return  this.basicsService.calcularStock(stock, cantidad);
         }
         
 

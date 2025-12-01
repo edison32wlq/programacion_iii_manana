@@ -72,4 +72,25 @@ export class BasicsService {
         };
     }
 
+    calcularStock(stock:number, cantidad:number): object {
+        let puedeVender: boolean = false;
+        let mensaje = 'Stock suficiente';
+        if (stock > cantidad){
+            puedeVender = true;
+            mensaje = 'Stock suficiente';
+        } else {
+            puedeVender = false;
+            mensaje = 'Stock insuficiente';
+        }
+
+        return {
+            "stock": stock,
+            "cantidadSolicitada": cantidad,
+            "puedeVender": puedeVender,
+            "mensaje": mensaje
+        }
+    }
+
+    
+
 }
