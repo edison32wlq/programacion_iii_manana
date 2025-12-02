@@ -8,13 +8,14 @@ import {
   Query,
   NotFoundException,
   InternalServerErrorException,
-  Put,
+  Put
 } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
-import { Post, Post as PostEntity } from './post.entity';
+import { Post as PostEntity } from './post.entity';
 import { Pagination } from 'nestjs-typeorm-paginate';
 import { SuccessResponseDto } from 'src/common/dto/response.dto';
+import { QueryDto } from 'src/common/dto/query.dto';
 
 @Controller('posts')
 export class PostsController {
@@ -28,26 +29,18 @@ export class PostsController {
   }
 
   @Get()
-  findAll(
-    @Query('page') page = 1,
-    @Query('limit') limit = 10,
-    @Query('search') search?: string,
-    @Query('searchField') searchField = 'title',
-    @Query('sortBy') sortBy = 'id',
-    @Query('sortOrder') sortOrder: 'ASC' | 'DESC' = 'ASC',
-  ): Promise<Pagination<Post>> {
-    limit = Number(limit);
-    page = Number(page);
-    limit = limit > 100 ? 100 : limit;
+  async findAll(
+    @Query() query: QueryDto,
+  ): Promise<SuccessResponseDto<Pagination<PostEntity>>> {
+    if (query.limit && query.limit > 100) {
+      query.limit = 100;
+    }
 
-    return this.postsService.findAll({
-      page,
-      limit,
-      search,
-      searchField,
-      sortBy,
-      sortOrder,
-    });
+    const result = await this.postsService.findAll(query);
+
+    if (!result) throw new InternalServerErrorException('Could not retrieve posts');
+
+    return new SuccessResponseDto('Posts retrieved successfully', result);
   }
 
   @Get(':id')
