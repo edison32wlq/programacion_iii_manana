@@ -9,6 +9,14 @@ import ParentInputNotifier from './props/ParentInputNotifier'
 import InputNotifier from './props/InputNotifier'
 import ParentUserList from './props/ParentUserList'
 import ParentLoginForm from './props/ParentLoginForm'
+import HoverFont from './useState/HoverFont'
+import AccessWithLimit from './useState/AccessWithLimit'
+import DocumentTitleChanger from './useState/DocumentTitleChanger'
+import PostLikes from './useState/PostLikes'
+import CheckboxSummary from './useState/CheckboxSummary'
+import LoginWithLimit from './useState/LoginWithLimit'
+import LanguageSwitcher from './useState/LanguageSwitcher'
+import MultiSwitch from './useState/MultiSwitch'
 
 
 function App() {
@@ -27,7 +35,14 @@ function App() {
       <ParentInputNotifier/>
       <ParentUserList/>
       <ParentLoginForm/>
-
+      <HoverFont/>
+      <AccessWithLimit/>
+      <DocumentTitleChanger/>
+      <PostLikes/>
+      <CheckboxSummary/>
+      <LoginWithLimit/>
+      <LanguageSwitcher/>
+      <MultiSwitch/>
     </>
 
     
