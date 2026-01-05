@@ -1,4 +1,3 @@
-import { IsNumber } from 'class-validator';
 import { useState } from 'react';
 
 export default function SimpleForm() {

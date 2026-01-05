@@ -43,14 +43,48 @@ import FiltroLista from './useMemo/FiltroLista'
 import TablaOrdenada from './useMemo/TablaOrdenada'
 import PrimosMemo from './useMemo/PrimosMemo'
 import ContadorLetras from './useMemo/ContadorLetras'
-import Contador from './useCallback/Contador'
 import Padre from './useCallback/ReRender'
-import Saludo from './useCallback/Saludo'
-import Lista from './useCallback/Lista-mult'
 import ContadorReducer from './useReducer/ContadorReducer'
 import FormularioReducer from './useReducer/FormularioReducer'
 import areaCirculo from './useReducer/areaCirculoReducer'
 import ListaReducer from './useReducer/ListaReducer'
+import ButtonCounterMP from './components/ButtonCounter_mp'
+import ColorBoxMP from './components/ColorBox_mp'
+import ConditionalTextMP from './components/ConditionalText_mp'
+import EmojiListMP from './components/EmojiList_mp'
+import PromedioMP from './components/Promedio_mp'
+import ShowDateTimeMP from './components/ShowDate_mp'
+import TechStoreWelcomeFormMP from './components/SimpleForm_mp'
+import TechTotalCalculatorMP from './components/SumaForm_mp'
+import TechProductSearch from './components/TextInput_mp'
+import TechProductDetailsToggle from './components/ToggleMessage_mp'
+import InputControlado from './components/Ejercicios_practica/components/input_controlado'
+import InputControladoInfo from './components/Ejercicios_practica/components/input_controlado_info'
+import Incrementar from './components/Ejercicios_practica/components/boton_incremental'
+import Invisible from './components/Ejercicios_practica/components/mostrar_ocultar'
+import Multiplicacion from './components/Ejercicios_practica/components/multiplicacioni'
+import Lista from './components/Ejercicios_practica/components/lista_productos'
+import Productos from './Ejercicios_practica/producto_props'
+import ContadorBasico from './Ejercicios_practica/contadorBasico'
+import AgregarCarrito from './Ejercicios_practica/productItemParent'
+import Saludo from './Ejercicios_practica/props/mensaje'
+import Input from './Ejercicios_practica/props/input'
+import InputParent from './Ejercicios_practica/props/inputParent'
+import Calculo from './Ejercicios_practica/props/calculo'
+import CalculoParent from './Ejercicios_practica/props/calculoParent'
+
+import Contador from './Ejercicios_practica/usseEffect/contador'
+import BotonMensaje from './Ejercicios_practica/usseEffect/botonMensaje'
+import SumaParent from './Ejercicios_practica/props/sumaParent'
+import AreaTriangulo from './useState/areaTriangulo'
+import HorasTrabajadas from './useState/horasTrabajadas'
+import CampoTexto from './useId/usedIdHook'
+import UseIdHook from './useId/usedIdHook'
+import LoginCampos from './useId/loginCampos'
+import Mayor from './useId/mayor'
+import { BuscadorUseTransition } from './useTransition/buscadorUseTransition'
+import { TabsUseTransition } from './useTransition/TabsUseTransition'
+import { GaleriaDiferida } from './useTransition/galeriaDeferida'
 
 
 
@@ -62,6 +96,8 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const toggleLogin = () => setIsLoggedIn(prev => !prev);
+
+  const saludo = "hola"
   
   return (
     <>
@@ -116,7 +152,7 @@ function App() {
 
       <ReproductorSonido/>
 
-      <MoverCaja/>*/}
+      <MoverCaja/>
 
       <ExpensiveCalc/>
       <FiltroLista/>
@@ -126,12 +162,33 @@ function App() {
       <Contador/>
       <Padre/>
       <Saludo/>
-      {/*<Lista/>*/}
+      {/*<Lista/>
 
       <ContadorReducer/>
       <FormularioReducer/>
-      {/*<areaCirculo/>*/}
-      <ListaReducer/>
+      {/*<areaCirculo/>
+      <ListaReducer/>*/}
+
+      <ButtonCounterMP/>
+      <ContadorBasico/>
+      <Productos/>
+      <ParentInputNotifier/>
+      <AgregarCarrito/>
+      <Saludo hola={saludo}/>
+      <InputParent/>
+      <CalculoParent/>
+      <Contador/>
+      <BotonMensaje/>
+      <ScrollDemo/>
+      <SumaParent/>
+      <AreaTriangulo/>
+
+      <HorasTrabajadas/>
+      <UseIdHook/>
+      <LoginCampos/>
+      <Mayor/>
+      <BuscadorUseTransition/>
+      <GaleriaDiferida/>
 
 
     </>
