@@ -85,6 +85,7 @@ import Mayor from './useId/mayor'
 import { BuscadorUseTransition } from './useTransition/buscadorUseTransition'
 import { TabsUseTransition } from './useTransition/TabsUseTransition'
 import { GaleriaDiferida } from './useTransition/galeriaDeferida'
+import ValidacionLogin from './useDeferredValue/loginValidacion'
 
 
 
@@ -189,6 +190,7 @@ function App() {
       <Mayor/>
       <BuscadorUseTransition/>
       <GaleriaDiferida/>
+      <ValidacionLogin/>
 
 
     </>
