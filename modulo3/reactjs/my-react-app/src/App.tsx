@@ -86,6 +86,13 @@ import { BuscadorUseTransition } from './useTransition/buscadorUseTransition'
 import { TabsUseTransition } from './useTransition/TabsUseTransition'
 import { GaleriaDiferida } from './useTransition/galeriaDeferida'
 import ValidacionLogin from './useDeferredValue/loginValidacion'
+import FormularioBasico from './formularios/FormularioBasico'
+import FormularioPentagono from './formularios/FormularioPentagono'
+import FormularioRHF from './formularios/FormularioRHF'
+import FormularioZod from './formularios/FormularioZod'
+import ListaPosts from './fetch/ListaPosts'
+import ListaUsuariosPaginado from './formularios/ListaUsuariosPaginado'
+
 
 
 
@@ -191,6 +198,12 @@ function App() {
       <BuscadorUseTransition/>
       <GaleriaDiferida/>
       <ValidacionLogin/>
+      <FormularioBasico/>
+      <FormularioPentagono/>
+      <FormularioRHF/>
+      <FormularioZod/>
+      <ListaPosts/>
+      <ListaUsuariosPaginado/>
 
 
     </>
